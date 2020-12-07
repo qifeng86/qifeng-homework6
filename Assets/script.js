@@ -16,16 +16,15 @@ $("#searchButton").click(function () {
         url: queryCurrentURL,
         method: "GET"
     }).then(function (response) {
-        console.log(response);
+        
+        var currentTemp = (response.main.temp - 273.15) * 1.80 + 32;
 
         $("#currentWeather").html(response.name);
         $('#currentDay').text(moment().format('l'));
         $("#weatherIcon").html("<img src='https://openweathermap.org/img/w/" + response.weather[0].icon + ".png' alt='current weather.'>");
+        $("#temperature").text((currentTemp).toFixed(1) + " °F");
         $("#wind").text(response.wind.speed + " MPH");
         $("#humidity").text(response.main.humidity + "%");
-
-        var currentTemp = (response.main.temp - 273.15) * 1.80 + 32;
-        $("#temperature").text((currentTemp).toFixed(1) + " °F");
 
         //get uv index from API based on lat and lon
         var lon = response.coord.lon;
