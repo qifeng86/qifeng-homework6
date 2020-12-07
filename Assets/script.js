@@ -57,7 +57,7 @@ $("#searchButton").click(function () {
             var temp = (response.list[day].main.temp - 273.15) * 1.80 + 32;
 
             $("#futureday" + [day]).html(futureday);
-            $("#futureweatherIcon" + [day]).html("<img src='https://openweathermap.org/img/w/" + response.list[day].weather[0].icon + ".png' alt='Next 1 day weather icon'>");
+            $("#futureweatherIcon" + [day]).html("<img src='https://openweathermap.org/img/w/" + response.list[day].weather[0].icon + ".png' alt='weather icon'>");
             $("#futuredayTemp" + [day]).text((temp).toFixed(1) + " °F");
             $("#futuredayHumidity" + [day]).text(response.list[day].main.humidity + "%");
 
