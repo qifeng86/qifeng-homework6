@@ -1,0 +1,57 @@
+body {
+background-color: lightgrey;
+
+}
+
+.jumbotron {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 50px;
+  text-align: center;
+  background-color: black;
+  color: white;
+  max-height: 5px;
+}
+
+input{
+  border: 2px solid, black;
+  resize: none;
+  color: black;
+  padding: 10px;
+}
+
+#serachField {
+
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+#searchButton {
+
+  color: white;
+}
+
+.todayWeatherReport {
+
+background-color: white;
+
+
+}
+
+.card {
+
+  background-color:blue;
+  color: white;
+  font-size: small;
+}
+
+#uv {
+
+background-color: red;
+
+}
+
+#currentWeather {
+
+  font-size: 50px;
+  font-weight: bold;
+}
